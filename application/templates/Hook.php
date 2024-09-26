@@ -1,17 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class <library> {
+class <hook> {
 	
 	protected $CI;
 
-	public function __construct($params = NULL)
+	public function __construct()
 	{
 		$this->CI =& get_instance();
 	}
 
-	public function ()
+	public function ($params = NULL)
 	{
-		
+
 	}
 }

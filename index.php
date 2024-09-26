@@ -50,6 +50,7 @@
  *     development
  *     testing
  *     production
+ *     maintenance
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */

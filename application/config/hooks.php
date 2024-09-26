@@ -11,10 +11,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |	https://codeigniter.com/userguide3/general/hooks.html
 |
 */
-$hook['pre_system'] = function()
-{
-	if (ENVIRONMENT === 'maintenance')
-	{
-		show_error('Service Unavailable', 503);
-	}
-};
+$hook['pre_controller'][] = array(
+	'class'    => 'Maintenance',
+	'function' => 'run',
+	'filename' => 'Maintenance.php',
+	'filepath' => 'hooks'
+);
