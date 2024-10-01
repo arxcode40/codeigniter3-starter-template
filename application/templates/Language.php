@@ -1,4 +1,4 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['<language>_'] = '';
+$lang['<language>_example'] = 'example';

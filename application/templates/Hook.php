@@ -10,8 +10,8 @@ class <hook> {
 		$this->CI =& get_instance();
 	}
 
-	public function ($params = NULL)
+	public function example($params = NULL)
 	{
-
+		return 'example';
 	}
 }

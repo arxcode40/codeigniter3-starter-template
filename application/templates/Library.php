@@ -10,8 +10,8 @@ class <library> {
 		$this->CI =& get_instance();
 	}
 
-	public function ()
+	public function example()
 	{
-		
+		return 'example';
 	}
 }
