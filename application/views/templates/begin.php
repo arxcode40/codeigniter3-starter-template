@@ -13,5 +13,6 @@
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+	<link href="<?= base_url(array('assets', 'css', 'style.css')) ?>" rel="stylesheet" />
 </head>
 <body class="d-flex flex-column min-dvh-100">

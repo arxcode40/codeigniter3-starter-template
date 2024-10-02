@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Layout {
+class Template {
 	
 	protected $CI;
 	
@@ -25,17 +25,18 @@ class Layout {
 		$this->layout = $layout;
 	}
 
-	public function section($name)
+	public function section($name, $contents)
 	{
+		if (is_array($contents) === FALSE)
+		{
+			$content = $contents;
+		}
+		else
+		{
+			$content = implode('', $contents);
+		}
+
 		$this->current_section = $name;
-
-		ob_start();
-	}
-
-	public function end_section()
-	{
-		$content = ob_get_clean();
-
 		$this->sections[$this->current_section] = $content;
 	}
 
@@ -43,16 +44,16 @@ class Layout {
 	{
 		if (isset($this->sections[$section_name]) === FALSE)
 		{
-			echo '';
+			return '';
 		}
 		else
 		{
-			echo $this->sections[$section_name];
+			return $this->sections[$section_name];
 		}
 	}
 
 	public function include($view, $vars = array())
 	{
-		$this->CI->load->view($view, $vars);
+		return $this->CI->load->view($view, $vars, TRUE);
 	}
 }
